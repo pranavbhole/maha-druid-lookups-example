@@ -1,0 +1,9 @@
+target
+.DS_Store
+.idea
+*.iml
+.project
+.settings
+*.log
+*.swp
+*.versionsBackup

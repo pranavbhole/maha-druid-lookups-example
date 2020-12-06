@@ -1,0 +1,19 @@
+{
+  "historical": {
+    "customer_lookup": {
+      "version": "v0",
+      "lookupExtractorFactory": {
+        "type": "cachedNamespace",
+        "extractionNamespace": {
+          "type": "maharocksdb",
+          "namespace": "customer_lookup",
+          "lookupName": "customer_lookup",
+          "rocksDbInstanceHDFSPath": "/Users/pranavbhole/git/maha-druid-lookups-example/target",
+          "lookupAuditingHDFSPath": "/tmp",
+          "pollPeriod": "PT30S",
+          "cacheEnabled": true
+        }
+      }
+    }
+  }
+}

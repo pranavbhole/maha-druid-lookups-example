@@ -1,0 +1,11 @@
+package org.maha_druid_lookups_example;
+
+option java_outer_classname = "CustomerProtos";
+
+message Customer {
+    optional string id = 1;
+    optional string name = 2;
+    optional string address = 3;
+    optional string status = 4;
+    optional string last_updated = 5;
+}
