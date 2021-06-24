@@ -63,6 +63,7 @@ Clone repo ```cd maha-druid-lookups-example``` and run
 ```druid.lookup.maha.namespace.schemaFactory=org.maha_druid_lookups_example.ExampleProtobufSchemaFactory```
 * schemaFactory configure the namespace to ProtoBuf class mapping, this tells maha-druid-lookups to DeSer values based on the Proto schema 
 * Place your core.site.xml to druid _common conf dir, in the example we are using local file system, thus copy
+ conf/druid/single-server/micro-quickstart/_common/core-site.xml  
 ```
 <configuration>
        <property>

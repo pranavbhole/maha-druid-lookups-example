@@ -1,0 +1,13 @@
+{
+  "type": "cachedNamespace",
+  "extractionNamespace": {
+    "type": "maharocksdb",
+    "namespace": "customer_dyn_lookup",
+    "lookupName": "customer_dyn_lookup",
+    "rocksDbInstanceHDFSPath": "/Users/pranavbhole/git/maha-druid-lookups-example/target",
+    "lookupAuditingHDFSPath": "/",
+    "pollPeriod": "PT30S",
+    "cacheEnabled": true,
+    "cacheActionRunner": "com.yahoo.maha.maha_druid_lookups.query.lookup.dynamic.DynamicCacheActionRunner"
+  }
+}

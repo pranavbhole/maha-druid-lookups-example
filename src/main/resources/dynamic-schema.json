@@ -1,0 +1,8 @@
+{
+  "type": "PROTOBUF",
+  "version" : "2021061800",
+  "name" : "customer_dyn_lookup",
+  "coreSchema": {
+    "descFilePath": "Customer.desc"
+  }
+}

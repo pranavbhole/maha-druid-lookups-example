@@ -1,3 +1,5 @@
+syntax = "proto3";
+
 package org.maha_druid_lookups_example;
 
 option java_outer_classname = "CustomerProtos";
