@@ -8,13 +8,11 @@ import org.zeroturnaround.zip.commons.FileUtils;
 import java.io.File;
 import java.io.FileOutputStream;
 import java.io.IOException;
-import java.nio.charset.Charset;
-import java.nio.file.Files;
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
 
 /**
- * Hello world!
+ * org.maha_druid_lookups_example.CreateExampleRocksDBInstance
  *
  */
 public class CreateExampleRocksDBInstance
@@ -69,12 +67,19 @@ public class CreateExampleRocksDBInstance
         File file = new File(String.format("target/load_time=%s/rocksdb.zip", dateStr));
         FileUtils.forceMkdir(new File(file.getParent()));
         ZipUtil.pack(new File(path), file);
-        File success = new File(String.format("target/load_time=%s/", dateStr), "_SUCCESS");
+        String localPath = String.format("target/load_time=%s/", dateStr);
+        File success = new File(localPath, "_SUCCESS");
         success.createNewFile();
         FileOutputStream out = new FileOutputStream(success);
         out.write("test".getBytes());
         out.close();
         //org.apache.commons.io.FileUtils.writeStringToFile(success, "_SUCCESS", Charset.defaultCharset());
         System.out.println("Created Zip file of size "+file.length());
+        uploadDynamicLookupSchemaJson(localPath);
+    }
+
+
+    public static void uploadDynamicLookupSchemaJson(String path) throws IOException {
+        FileUtils.copyFileToDirectory(new File("src/main/resources/dynamic-schema.json"), new File(path));
     }
 }

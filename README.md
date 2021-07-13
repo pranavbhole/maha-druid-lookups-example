@@ -52,6 +52,9 @@ Clone repo ```cd maha-druid-lookups-example``` and run
 
 # Step 2: 
  * Run the class CreateExampleRocksDBInstance which creates example rocksdb with Customer loaded from key 1 to 100.
+  ```
+    mvn exec:java -Dexec.mainClass="org.maha_druid_lookups_example.CreateExampleRocksDBInstance"
+  ```
  * You will find that ```target/load_time=202012050000/rocksdb.zip``` is created
  * In this example, we are going to use local file system in the place of real hdfs cluster
  * Rocksdb Lookups expect _SUCCESS marker in the path 

@@ -2,7 +2,31 @@
   "type": "PROTOBUF",
   "version" : "2021061800",
   "name" : "customer_dyn_lookup",
-  "coreSchema": {
-    "descFilePath": "Customer.desc"
-  }
+  "schemaFieldList": [
+    {
+      "field": "id",
+      "dataType": "STRING",
+      "index": 1
+    },
+    {
+      "field": "name",
+      "dataType": "STRING",
+      "index": 2
+    },
+    {
+      "field": "address",
+      "dataType": "STRING",
+      "index": 3
+    },
+    {
+      "field": "status",
+      "dataType": "STRING",
+      "index": 4
+    },
+    {
+      "field": "last_updated",
+      "dataType": "STRING",
+      "index": 5
+    }
+  ]
 }
