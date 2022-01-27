@@ -194,14 +194,36 @@ and run from maha-druid-lookups-example dir.
 this will compile Customer proto and will generate java class CustomerProtos in package `org.maha_druid_lookups_example`
 
 
+## Example MAHA_LOOKUP Value Mapped query via SQL
 
-
-
-
+```
+SELECT
+MAHA_LOOKUP(id, 'student_lookup', 'grade', 'NA', 'A->A,B->A,F->DONT_TELL_MOM,0->ZERO') AS "grade"
+FROM
+  "druid"."grade_book"
+WHERE
+  id is not null
+GROUP BY
+  MAHA_LOOKUP(id, 'student_lookup', 'grade', 'NA', 'A->A,B->A,F->DONT_TELL_MOM,0->ZERO')
+```
  
+This will select records from the "grade_book" table, mapping "grade_book"."grade" values as requested.
 
 
+## Example MAHA_LOOKUP Key Mapped query via SQL
 
+```
+SELECT
+MAHA_LOOKUP(id, 'student_lookup', 'grade', 'NA', '', 'A->A,B->A,F->DONT_TELL_MOM,0->ZERO') AS "grade"
+FROM
+  "druid"."grade_book"
+WHERE
+  id is not null
+GROUP BY
+  MAHA_LOOKUP(id, 'student_lookup', 'grade', 'NA', '', 'A->A,B->A,F->DONT_TELL_MOM,0->ZERO')
+```
+
+This will select records from the "grade_book" table, remapping "grade_book"."grade" values based on the value of "id".
 
 
 
