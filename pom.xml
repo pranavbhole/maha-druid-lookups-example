@@ -18,7 +18,7 @@
     <maven.compiler.source>1.8</maven.compiler.source>
     <maven.compiler.target>1.8</maven.compiler.target>
     <protobuf.version>3.1.0</protobuf.version>
-    <maha.version>6.64</maha.version>
+    <maha.version>6.86</maha.version>
   </properties>
 
   <repositories>
